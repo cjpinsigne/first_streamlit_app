@@ -34,13 +34,13 @@ try:
   else:
     back_from_function = get_fruityvice_data(fruit_choice)
     streamlit.dataframe(back_from_function)
-except URLError as e:
-  streamlit.error()
+#except URLError as e:
+ #streamlit.error()
 #streamlit.write('The user entered ', fruit_choice)
 
 
 
-fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
+#fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
 
 streamlit.stop()
 
