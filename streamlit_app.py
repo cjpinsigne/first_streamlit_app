@@ -40,7 +40,8 @@ try:
 
 
 
-fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + this_fruit_choice)
+#fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + this_fruit_choice)
+get_fruity_vice_data(this_fruit_choice)
 
 streamlit.stop()
 
