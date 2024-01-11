@@ -22,7 +22,7 @@ streamlit.dataframe(fruits_to_show)
 
 #Create a repeatable function code
 def get_fruityvice_data(this_fruit_choice):
-    fruityvice_response = requests.get("https://fruitvice.com/api/fruit/" + this_fruit_choice)
+    fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + this_fruit_choice)
     fruityvice_normalized = pandas.json_normalize(fruityvice_response.json())
     return fruityvice_normalized
 
@@ -34,9 +34,9 @@ try:
   else:
     back_from_function = get_fruityvice_data(fruit_choice)
     streamlit.dataframe(back_from_function)
-except URLError as e:
- streamlit.error()
-streamlit.write('The user entered ', fruit_choice)
+#except URLError as e:
+ #streamlit.error()
+#streamlit.write('The user entered ', fruit_choice)
 
 
 
