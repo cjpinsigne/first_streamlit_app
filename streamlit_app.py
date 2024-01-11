@@ -35,9 +35,9 @@ try:
     back_from_function = get_fruityvice_data(fruit_choice)
     streamlit.dataframe(back_from_function)
       
-streamlit.stop()
-#except URLError as e:
- #streamlit.error()
+
+except URLError as e:
+ streamlit.error()
 #streamlit.write('The user entered ', fruit_choice)
 
 streamlit.stop()
