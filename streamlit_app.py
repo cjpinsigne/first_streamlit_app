@@ -34,16 +34,16 @@ try:
   else:
     back_from_function = get_fruityvice_data(fruit_choice)
     streamlit.dataframe(back_from_function)
+streamlit.stop()
 #except URLError as e:
  #streamlit.error()
 #streamlit.write('The user entered ', fruit_choice)
 
 
 
-#fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + this_fruit_choice)
-get_fruity_vice_data(this_fruit_choice)
+fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + fruit_choice)
 
-streamlit.stop()
+
 
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
