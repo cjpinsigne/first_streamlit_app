@@ -42,7 +42,7 @@ try:
 
 #fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + this_fruit_choice)
 
-streamlit.stop()
+#streamlit.stop()
 
 my_cnx = snowflake.connector.connect(**streamlit.secrets["snowflake"])
 my_cur = my_cnx.cursor()
