@@ -41,7 +41,7 @@ except URLError as e:
 #streamlit.write('The user entered ', fruit_choice)
 
 #streamlit.stop()
-fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + this_fruit_choice)
+#fruityvice_response = requests.get("https://fruityvice.com/api/fruit/" + this_fruit_choice)
 
 
 streamlit.header("The fruit load list contains:")
